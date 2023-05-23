@@ -146,10 +146,10 @@ Docker reads the steps one by one and builds customized image. Let's see how Doc
 cd modified-jenkins
 ```
 
-* Replace `'kmlaydin'` with your Docker Hub username and run the following command to build a modified Jenkins image:
+* Replace `'supaket'` with your Docker Hub username and run the following command to build a modified Jenkins image:
 
 ```
-docker build -t kmlaydin/modified-jenkins:latest .
+docker build -t supaket/modified-jenkins:latest .
 ```
 
 ![build-a-modified-jenkins-image](./gif/build-a-modified-jenkins-image.gif "Build a Modified Jenkins Image")
@@ -169,7 +169,7 @@ docker login
 * Next, push the modified Jenkins image to Docker Hub with this command (remember to replace `'kmlaydin'` with your Docker Hub username):
 
 ```
-docker push kmlaydin/modified-jenkins:latest
+docker push supaket/modified-jenkins:latest
 ```
 
 ![push-image-to-dockerhub](./gif/push-image-to-dockerhub.gif "Push Modified Jenkins Image to Docker Hub")
@@ -177,7 +177,7 @@ docker push kmlaydin/modified-jenkins:latest
 The pushed image can now be seen via [Docker Hub](https://hub.docker.com/) and Kubernetes can now access the image conveniently. Kubernetes works with [YAML files](https://developer.ibm.com/tutorials/yaml-basics-and-usage-in-kubernetes) to handle configurations.
 
 * Now you need to open the `'jenkins-deployment.yaml'` file, located in the `'modified-jenkins directory'`, with a code editor.
-* Find `'kmlaydin/modified-jenkins:latest'` and replace the Docker Hub username, pushed image's name, and version.
+* Find `'supaket/modified-jenkins:latest'` and replace the Docker Hub username, pushed image's name, and version.
 
 ![jenkins-deployment-image-change](./gif/jenkins-deployment-image-change.gif "Jenkins Deployment Change Image")
 
